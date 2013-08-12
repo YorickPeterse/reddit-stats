@@ -14,7 +14,14 @@ ratio = DB[:posts].select { [:title_gender, sum(:comments).as(:value)] }
   .where(:title_gender => genders)
   .group(:title_gender)
 
-upvotes = DB[:posts].select { [:title_gender, sum(:upvotes).as(:upvotes), sum(:downvotes).as(:downvotes)] }
+upvotes = DB[:posts]
+  .select {
+    [
+      :title_gender,
+      sum(:upvotes).as(:upvotes),
+      sum(:downvotes).as(:downvotes)
+    ]
+  }
   .where(:title_gender => genders)
   .group(:title_gender)
 
