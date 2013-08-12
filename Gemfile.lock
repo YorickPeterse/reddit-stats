@@ -1,0 +1,19 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    faraday (0.8.8)
+      multipart-post (~> 1.2.0)
+    faraday_middleware (0.9.0)
+      faraday (>= 0.7.4, < 0.9)
+    multipart-post (1.2.0)
+    pg (0.16.0)
+    sequel (4.1.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  faraday
+  faraday_middleware
+  pg
+  sequel
